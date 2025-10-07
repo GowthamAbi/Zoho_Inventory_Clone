@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
-import logo  from '../../assets/logo/inventory-logo-new.svg'
+import logo  from '../../assets/logo/LeaTem.png'
 
 export default function Navbar() {
      const [open, setOpen] = useState(false);
+     const [taggele,setTaggele]=useState(false)
   return (
     <nav >
         <div className=' flex justify-between mx-auto max-w-6xl p-2 '>
         {/* Logo and Company Name */}
-        <div>
-            <a href="/"  >
-                <img src={logo} alt="Zoho Logo" className='w-32 '/>
+        <div >
+            <a href="/" className='flex items-center gap-2 ' >
+                <img src={logo} alt="Leatem" className='w-8 '/>
+                <h1 className='text-blue-400 text-2xl font-bold'>LEATEM</h1>
             </a>
         </div>
 
@@ -39,8 +41,8 @@ export default function Navbar() {
         <li>Solution</li>
         <li>Pricing</li>
         <li>Customers</li>
-        <li>Integration</li>
-        <li>Resources</li>
+        <li ><button className='bg-gray-200 rounded-lg px-2  text-red-600 font-semibold transform transition-transform hover:scale-110 cursor-pointer'>Sign In</button></li>
+        <li><button className='bg-red-400 rounded-lg px-2  text-white font-semibold transform transition-transform hover:scale-110 cursor-pointer'>Sign Up</button></li>
 
         </ul>
 
@@ -76,8 +78,26 @@ export default function Navbar() {
             }
 
             {/* Menu Bar */}
-            {open && <ul className='absolute w-3/4 bg-white text-center right-0 mt-3 rounded-lg shadow-2xl p-2 '>
-              <li className='border-b-2 border-gray-100  '>1</li>
+            {open && <ul className='absolute w-3/4 bg-white text-center right-0 mt-5 rounded-lg shadow-2xl p-2 '>
+              <li className='border-b-2 border-gray-100'  onClick={()=>setTaggele(!taggele)} >
+              <button  className='flex justify-between items-center space-x-2 hover:text-red-500'>
+              <h5>Features</h5>
+               <svg xmlns="http://www.w3.org/2000/svg" className={`w-4 ml-30 transform transition-transform duration-300 ${!taggele?'rotate-180':'rotate-0'}`} 
+               fill="none"
+                viewBox="0 0 24 24"
+                 strokeWidth="1.5" 
+                 stroke="currentColor"
+                
+                  >
+              <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+
+            {taggele && (<ul className=' bg-white rounded-lg  flex shadow-2xl w-full flex-wrap '>
+                <li>Option 1</li>
+                <li>Option 2</li>
+           </ul>)}
+              </li>
               <li className='border-b-2 border-gray-100'>2</li>
               <li className='border-b-2 border-gray-100'>3</li>
               <li className='border-b-2 border-gray-100'>4</li>
@@ -90,3 +110,4 @@ export default function Navbar() {
     </nav>
   )
 }
+
