@@ -82,7 +82,7 @@ export default function Navbar() {
               <li className='border-b-2 border-gray-100'  onClick={()=>setTaggele(!taggele)} >
               <button  className='flex justify-between items-center space-x-2 hover:text-red-500'>
               <h5>Features</h5>
-               <svg xmlns="http://www.w3.org/2000/svg" className={`w-4 ml-30 transform transition-transform duration-300 ${!taggele?'rotate-180':'rotate-0'}`} 
+               <svg xmlns="http://www.w3.org/2000/svg" className={`w-4 ml-30  transform transition-transform duration-300 ${!taggele?'rotate-180':'rotate-0'}`} 
                fill="none"
                 viewBox="0 0 24 24"
                  strokeWidth="1.5" 
