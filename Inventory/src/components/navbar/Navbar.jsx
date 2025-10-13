@@ -11,13 +11,13 @@ export default function Navbar() {
         <div >
             <a href="/" className='flex items-center gap-2 ' >
                 <img src={logo} alt="Leatem" className='w-8 '/>
-                <h1 className='text-blue-400 text-2xl font-bold'>LEATEM</h1>
+                <h1 className='hidden md:block text-blue-400 text-2xl font-bold'>LEATEM</h1>
             </a>
         </div>
 
         {/* Navigation */}
         <ul className=' hidden md:flex gap-4 text-center items-center '>
-        <li className="flex items-center space-x-1 relative" onMouseEnter={()=>setOpen(true)} onMouseLeave={()=>setOpen(false)}>
+        <li className="flex items-center space-x-1 relative" onClick={()=>setOpen(!open)} >
 
             <button  className='flex text-center space-x-2 focus:outline-none hover:text-red-500'>
               <span>Features</span>
