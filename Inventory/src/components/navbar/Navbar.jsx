@@ -5,7 +5,7 @@ export default function Navbar() {
      const [open, setOpen] = useState(false);
      const [taggele,setTaggele]=useState(false)
   return (
-    <nav >
+    <nav className='sticky top-0' >
         <div className=' flex justify-between mx-auto max-w-6xl p-2 '>
         {/* Logo and Company Name */}
         <div >

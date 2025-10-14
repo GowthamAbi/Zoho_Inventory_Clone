@@ -3,7 +3,7 @@ const data = [
   {
     id: "Box",
     title: "Real Time Inventory",
-    content: "Keep Tracking everywhere",
+    content: "Keep track of stock across multiple warehouse",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <title>Real-time Inventory (Cube)</title>
@@ -17,6 +17,7 @@ const data = [
   {
     id: "Bar_chart",
     title: "Smart Sales Analytics",
+    content: "Visualize sales and revenue trends",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <title>Smart Sales Analytics (Bar Chart)</title>
@@ -30,6 +31,7 @@ const data = [
   {
     id: "Bell",
     title: "Low Stock Alerts",
+    content: "Get instant notifications when items run low",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <title>Low Stock Alerts (Bell)</title>
@@ -41,6 +43,7 @@ const data = [
   {
     id: "Reports_Insights",
     title: "Reports & Insights",
+    content: "Generate downloadable reports easily",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <title>Reports & Insights (File + Chart)</title>
@@ -55,6 +58,7 @@ const data = [
   {
     id: "Multi_channel",
     title: "Multi-channel Sync",
+    content: "Manage inventory across Amazon,Flipkart,Shopify,etc",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <title>Multi-channel Sync (Globe)</title>
@@ -69,6 +73,7 @@ const data = [
   {
     id: "Monitor",
     title: "Dashboard Preview",
+    content: "Monitoring every time",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="64" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <title>Dashboard Preview (Monitor)</title>

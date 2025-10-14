@@ -1,14 +1,16 @@
 import React from 'react'
-import data from '../../../public/data.jsx'
+import data from '../../data.jsx'
 
 
 export default function Feature() {
   return (
-<div className='grid grid-cols-1 md:grid-cols-3  mx-auto max-w-6xl'>
+<div className='grid grid-cols-2 md:grid-cols-3  mx-auto max-w-6xl'>
       {data.map(item => (
-        <div key={item.id} className='bg-gray-300 mx-4 my-2 p-4 rounded-lg'>
-          <h2 className='font-bold text-lg'>{item.title}</h2>
-          <div className='my-2'>{item.icon}</div>
+        <div key={item.id} className='bg-gray-200 p-4 mx-4 my-2 rounded-lg transform transition-transform hover:scale-105'>
+          <div className='flex flex-wrap gap-6 items-center '>
+          <div className='my-2 '>{item.icon}</div>
+          <h2 className='font-bold text-sm md:text-lg text-wrap '>{item.title}</h2>
+          </div>
           <p>{item.content}</p>
         </div>
       ))}
