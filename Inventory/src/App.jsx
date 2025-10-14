@@ -1,15 +1,18 @@
 import React from 'react'
 import './App.css'
 import Navbar from './components/navbar/Navbar'
-import HeroSection from './components/Hero/HeroSection'
 import Footer from './components/Footer'
+import Router from './components/router/Router'
+import { BrowserRouter } from 'react-router-dom'
 
 export default function App() {
   return (
     <div className='bg-gray-100'>
-      <Navbar/>
-      <HeroSection/>
+      <BrowserRouter>
+      
+      <Router />   
       <Footer/>
+      </BrowserRouter>
     </div>
   )
 }

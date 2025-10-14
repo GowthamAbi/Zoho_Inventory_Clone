@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import logo  from '../../assets/logo/LeaTem.png'
+import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
      const [open, setOpen] = useState(false);
      const [taggele,setTaggele]=useState(false)
+
+    const navigate=useNavigate()
+    
   return (
     <nav className='sticky top-0' >
         <div className=' flex justify-between mx-auto max-w-6xl p-2 '>
@@ -41,8 +45,12 @@ export default function Navbar() {
         <li>Solution</li>
         <li>Pricing</li>
         <li>Customers</li>
-        <li ><button className='bg-gray-200 rounded-lg px-2  text-red-600 font-semibold transform transition-transform hover:scale-110 cursor-pointer'>Sign In</button></li>
-        <li><button className='bg-red-400 rounded-lg px-2  text-white font-semibold transform transition-transform hover:scale-110 cursor-pointer'>Sign Up</button></li>
+        <li ><button className='bg-gray-200 rounded-lg px-2
+          text-red-600 font-semibold transform transition-transform 
+          hover:scale-110 cursor-pointer' onClick={()=>navigate('/login')}>Sign In</button></li>
+        <li><button className='bg-red-400 rounded-lg px-2 
+         text-white font-semibold transform transition-transform 
+         hover:scale-110 cursor-pointer' onClick={()=>navigate('/register')}>Sign Up</button></li>
 
         </ul>
 
