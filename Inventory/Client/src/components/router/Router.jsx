@@ -9,6 +9,9 @@ import Products from '../dashboard/sidepage/Products.jsx'
 import Orders from '../dashboard/sidepage/Orders.jsx'
 import Reports from '../dashboard/sidepage/Reports.jsx'
 import Option from '../dashboard/option/Option.jsx'
+import Suppliers from '../dashboard/sidepage/Suppliers.jsx'
+import Sales from '../dashboard/sidepage/Sales.jsx'
+import Settings from '../dashboard/sidepage/Settings.jsx'
 
 export default function Router() {
   return (
@@ -24,9 +27,14 @@ export default function Router() {
             <Route index path='dashboard' element={<Dashboard/>}/>
             <Route path='products' element={<Products />} />
             <Route path='orders' element={<Orders />} />
+            <Route path='sales' element={<Sales />} />
+            <Route path='suppliers' element={<Suppliers />} />
             <Route path='reports' element={<Reports />} />
+            <Route path='settings' element={<Settings />} />
             </Route>
         </Routes>
  
   )
 }
+
+
