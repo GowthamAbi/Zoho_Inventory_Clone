@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom'
 export default function Sidebar() {
   const navigate=useNavigate()
   return (
-    <div className='w-fit px-2'>
-    <ul className='py-4'  >
-  <button className='flex gap-1 items-center  hover:bg-gray-200 p-2 pr-8 rounded-lg cursor-pointer '
+    <div className=' pl-2  border-r-2 border-gray-200'>
+    <ul className='py-4 '  >
+  <button className='flex gap-1 items-center  hover:bg-gray-200 p-2 rounded-lg cursor-pointer w-full '
    onClick={()=>navigate('/admin/dashboard')} 
    
    >
@@ -20,7 +20,19 @@ export default function Sidebar() {
     Dashboard
   </button>
 
-  <button className='flex gap-1 items-center hover:bg-gray-200 p-2 rounded-lg'  onClick={()=>navigate('/admin/products')} >
+    <button className='flex gap-1 items-center  hover:bg-gray-200 p-2 pr-8 rounded-lg cursor-pointer w-full '
+   onClick={()=>navigate('/admin/addproduct')} 
+   
+   >
+<svg xmlns="http://www.w3.org/2000/svg"
+ fill="none" viewBox="0 0 24 24"
+  strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+</svg>
+    Add
+  </button>
+
+  <button className='flex gap-1 items-center hover:bg-gray-200 p-2 cursor-pointer rounded-lg w-full'  onClick={()=>navigate('/admin/products')} >
 
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d="M21 16V8a2 2 0 0 0-1-1.73L12 3 4 6.27A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73L12 21l8-3.27A2 2 0 0 0 21 16z"></path>
@@ -29,7 +41,7 @@ export default function Sidebar() {
     Products
   </button>
 
-  <button className='flex gap-1 items-center hover:bg-gray-200 p-2 rounded-lg' onClick={()=>navigate('/admin/suppliers')} >
+  <button className='flex gap-1 items-center hover:bg-gray-200 p-2 rounded-lg cursor-pointer  w-full' onClick={()=>navigate('/admin/suppliers')} >
 
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d="M16 11c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z"></path>
@@ -39,7 +51,7 @@ export default function Sidebar() {
     Suppliers
   </button>
 
-  <button className='flex gap-1 items-center hover:bg-gray-200 p-2 rounded-lg' onClick={()=>navigate('/admin/orders')}>
+  <button className='flex gap-1 items-center hover:bg-gray-200 p-2 rounded-lg cursor-pointer  w-full' onClick={()=>navigate('/admin/orders')}>
 
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d="M9 11h6"></path>
@@ -51,7 +63,7 @@ export default function Sidebar() {
     Orders
   </button>
 
-  <button className='flex gap-1 items-center hover:bg-gray-200 p-2 rounded-lg' onClick={()=>navigate('/admin/sales')}>
+  <button className='flex gap-1 items-center hover:bg-gray-200 p-2 rounded-lg cursor-pointer  w-full' onClick={()=>navigate('/admin/sales')}>
 
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <polyline points="3 17 9 11 13 15 21 7"></polyline>
@@ -60,7 +72,7 @@ export default function Sidebar() {
     Sales
   </button>
 
-  <button className='flex gap-1 items-center hover:bg-gray-200 p-2 rounded-lg' onClick={()=>navigate('/admin/reports')} >
+  <button className='flex gap-1 items-center hover:bg-gray-200 p-2 rounded-lg  cursor-pointer  w-full' onClick={()=>navigate('/admin/reports')} >
 
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <rect x="3" y="11" width="4" height="7"></rect>
@@ -71,7 +83,7 @@ export default function Sidebar() {
     Reports
   </button>
 
-  <button className='flex gap-1 items-center hover:bg-gray-200 p-2 rounded-lg' onClick={()=>navigate('/admin/settings')}>
+  <button className='flex gap-1 items-center hover:bg-gray-200 p-2 rounded-lg  cursor-pointer w-full' onClick={()=>navigate('/admin/settings')}>
    
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"></path>
