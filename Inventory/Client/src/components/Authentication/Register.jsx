@@ -60,7 +60,7 @@ export default function Register() {
            className=' px-2 outline-none text-center border border-gray-200 rounded-lg focus:ring-2  focus:ring-blue-400 ' onChange={handleChange} name='password' value={userData.password}/>
         <button  type='submit'
         disabled={!userData.name && !userData.email && !userData.password && !userData.phone}
-         className={`${(!userData.name && !userData.email && !userData.password && !userData.phone)?'bg-gary-400':"bg-blue-300 hover:bg-blue-500"}cursor-pointer text-white   rounded-3xl`}
+         className={`${(!userData.name && !userData.email && !userData.password && !userData.phone)?'bg-gary-400':"bg-blue-300 hover:bg-blue-500"} cursor-pointer text-white   rounded-3xl`}
         >SUBMIT</button>
         <div className='flex  space-x-2'>
           <h3>Already have a Account ?</h3>

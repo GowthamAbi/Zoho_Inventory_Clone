@@ -53,7 +53,7 @@ try {
            className=' px-2 outline-none text-center border border-gray-200 rounded-lg focus:ring-2  focus:ring-blue-400 ' onChange={handleChange} name='password' value={userData.password}/>
         <button  type='submit'
         disabled={!userData.email && !userData.password}
-         className={`${( !userData.email && !userData.password )?'bg-gary-400':"bg-blue-300 hover:bg-blue-500"}cursor-pointer text-white   rounded-3xl`}
+         className={`${( !userData.email && !userData.password )?'bg-gary-400':"bg-blue-300 hover:bg-blue-500"} cursor-pointer text-white   rounded-3xl`}
         >SUBMIT</button>
         <div className='flex  space-x-2'>
           <h3>You haven't a Account ?</h3>

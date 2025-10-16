@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom'
 export default function Dashboard() {
   return (
     <section>
-       <h1>Hi this is header</h1>
+        <h1>Hi</h1> 
     </section>
   )
 }

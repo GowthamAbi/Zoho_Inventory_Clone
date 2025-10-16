@@ -6,7 +6,10 @@ export default function Sidebar() {
   return (
     <div className='w-fit px-2'>
     <ul className='py-4'  >
-  <button className='flex gap-1 items-center  hover:bg-gray-200 p-2 pr-8 rounded-lg cursor-pointer ' onClick={()=>{navigate('/admin/dashboad')}} >
+  <button className='flex gap-1 items-center  hover:bg-gray-200 p-2 pr-8 rounded-lg cursor-pointer '
+   onClick={()=>navigate('/admin/dashboad')} 
+   
+   >
     <svg width="20" height="20" viewBox="0 0 24 24"
      fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <rect x="3" y="3" width="7" height="7"></rect>

@@ -1,11 +1,14 @@
 import React from 'react'
 import { BrowserRouter, Route, RouterProvider, Routes } from 'react-router-dom'
-import Login from '../Authentication/Login'
-import Register from '../Authentication/Register'
-import HeroSection from '../Hero/HeroSection'
-import Navbar from '../navbar/Navbar'
-import Dashboard from '../dashboard/sidepage/Dashboard'
-import Option from '../dashboard/sidepage/Option'
+import Login from '../Authentication/Login.jsx'
+import Register from '../Authentication/Register.jsx'
+import HeroSection from '../Hero/HeroSection.jsx'
+import Navbar from '../navbar/Navbar.jsx'
+import Dashboard from '../dashboard/sidepage/Dashboard.jsx'
+import Products from '../dashboard/sidepage/Products.jsx'
+import Orders from '../dashboard/sidepage/Orders.jsx'
+import Reports from '../dashboard/sidepage/Reports.jsx'
+import Option from '../dashboard/option/Option.jsx'
 
 export default function Router() {
   return (
@@ -17,7 +20,12 @@ export default function Router() {
             <HeroSection/></>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
-            <Route path='/admin' element={<Option/>} />
+            <Route path='/admin' element={<Option/>} >
+            <Route index path='dashboard' element={<Dashboard/>}/>
+            <Route path='products' element={<Products />} />
+            <Route path='orders' element={<Orders />} />
+            <Route path='reports' element={<Reports />} />
+            </Route>
         </Routes>
  
   )
