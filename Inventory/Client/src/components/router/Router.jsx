@@ -18,11 +18,17 @@ export default function Router() {
     
 
         <Routes>
+
+          {/* Home pages */}
             <Route path='/' element={<>
             <Navbar/>
             <HeroSection/></>}/>
+
+            {/* Authentication pages */}
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
+
+            {/* After login pages */}
             <Route path='/admin' element={<Option/>} >
             <Route index path='dashboard' element={<Dashboard/>}/>
             <Route path='products' element={<Products />} />
@@ -32,6 +38,9 @@ export default function Router() {
             <Route path='reports' element={<Reports />} />
             <Route path='settings' element={<Settings />} />
             </Route>
+
+            {/*  */}
+            
         </Routes>
  
   )

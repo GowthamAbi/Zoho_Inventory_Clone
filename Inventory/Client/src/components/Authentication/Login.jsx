@@ -24,7 +24,7 @@ try {
         password: userData.password,
       });
         console.log("Login Success:", response.data);
-    navigate('/')
+    navigate('/admin/dashboard')
     setUserData({email:'',password:''})
 } catch (error) {
   console.log("Login Error")

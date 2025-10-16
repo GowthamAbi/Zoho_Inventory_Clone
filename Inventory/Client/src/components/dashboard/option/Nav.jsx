@@ -1,11 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Nav() {
+
+const navigate=useNavigate()
+
   return (
     <nav className='sticky top-0'>
         <ul className='flex justify-between  bg-gray-600 px-4 py-2 text-white '>
         <div className='flex justify-center gap-2 items-center'>
-        <li>LeaTem</li>
+        <button onClick={()=>navigate('/')}   >LeaTem</button>
         <li>| Inventory Manager</li>
         </div>
 

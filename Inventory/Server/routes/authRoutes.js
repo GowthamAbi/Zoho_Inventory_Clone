@@ -5,6 +5,6 @@ import authMiddleware from '../middleware/authMiddleware.js'
 const router=express.Router()
 
 router.post('/register',authControll.Register)
-router.post('/login',authMiddleware,authControll.login)
+router.post('/login',authControll.login)
 
 export default router

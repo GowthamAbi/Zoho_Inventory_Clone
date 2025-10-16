@@ -27,9 +27,15 @@ try {
     
     const{email,password}=req.body
 
+    console.log(email,password)
+
     const user = await User.findOne({ email });
 
+    console.log(user)
+
     const isMatch=await bcrypt.compare(password,user.password)
+
+    console.log(user)
 
     const token = jwt.sign({ userId: user.id }, "Apple", { expiresIn: "1h" });
 
