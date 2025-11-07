@@ -1,4 +1,4 @@
-import Fabric from "../../models/Fabric.js"
+import Fabric from "../../models/Fabric/Inward.js"
 
 
 const fabricController={
@@ -22,6 +22,17 @@ const fabricController={
         try {
             const{FABRIC_GROUP,COLOR_NAME}=req.body
             const fabric=await Fabric.findOne({FABRIC_GROUP,COLOR_NAME})
+            res.status(200).send({fabric})
+            console.log(fabric)
+        } catch (error) {
+            console.log("Error in Outward")
+        }
+    },
+
+    Balance:async(req,res)=>{
+        try {
+            
+            const fabric=await Fabric.findOne()
             res.status(200).send({fabric})
             console.log(fabric)
         } catch (error) {
