@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import api from '../../../services/api'
 
-export default function AddProduct() {
+export default function Inward() {
 const [userData, setUserData] = useState({
   DOC_NO: "",
   DATE: "",

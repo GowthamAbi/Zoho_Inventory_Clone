@@ -21,7 +21,7 @@ const fabricController={
     Outward:async(req,res)=>{
         try {
             const{FABRIC_GROUP,COLOR_NAME,ROLL,WGT}=req.body
-            let fabricBalance=await FabricBalance.find({FABRIC_GROUP,COLOR_NAME})
+            let fabricBalance=await FabricBalance.findOne({FABRIC_GROUP,COLOR_NAME})
             .select('DOC_NO FABRIC_GROUP COLOR_NAME SET_NO DC_DIA RECD_DC_ROLL RECD_DC_WGT _id');
                fabricBalance.RECD_DC_ROLL = Number(fabricBalance.RECD_DC_ROLL) - Number(ROLL);
                fabricBalance.RECD_DC_WGT = Number(fabricBalance.RECD_DC_WGT) - Number(WGT);

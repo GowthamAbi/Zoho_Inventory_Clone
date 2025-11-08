@@ -16,3 +16,8 @@
     "RECD_DC_ROLL":"16",
     "RECD_DC_WGT":"17"
 }
+
+
+            ,ROLL,WGT
+               fabricBalance.RECD_DC_ROLL = Number(fabricBalance.RECD_DC_ROLL) - Number(ROLL);
+               fabricBalance.RECD_DC_WGT = Number(fabricBalance.RECD_DC_WGT) - Number(WGT);
