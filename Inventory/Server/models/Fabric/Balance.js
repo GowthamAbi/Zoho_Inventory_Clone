@@ -83,6 +83,6 @@ const fabricBalanceSchema=new mongoose.Schema({
     }
 })
 
-const FabricBalance=mongoose.model('fabric',fabricBalanceSchema)
+const FabricBalance=mongoose.model('balance',fabricBalanceSchema)
 
 export default FabricBalance

@@ -30,12 +30,12 @@ export default function Router() {
             <Route path='/register' element={<Register/>}/>
 
             {/* After login pages */}
-            <Route path='/admin' element={<Option/>} >
+            <Route path='/inventory' element={<Option/>} >
             <Route index path='dashboard' element={<Dashboard/>}/>
             <Route path='products' element={<Products />} />
             <Route path='orders' element={<Orders />} />
             <Route path='sales' element={<Sales />} />
-            <Route path='addproduct' element={<AddProduct />} />
+            <Route path='inward' element={<AddProduct />} />
             <Route path='suppliers' element={<Suppliers />} />
             <Route path='reports' element={<Reports />} />
             <Route path='settings' element={<Settings />} />

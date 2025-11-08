@@ -7,7 +7,7 @@ const fabricSchema=new mongoose.Schema({
             trim:true
     },
     DATE:{
-            type:Date,
+            type:String,
             required:true,
             trim:true
     },

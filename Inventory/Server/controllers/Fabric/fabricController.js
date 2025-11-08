@@ -1,5 +1,5 @@
 import Fabric from "../../models/Fabric/Inward.js"
-
+import FabricBalance from "../../models/Fabric/Balance.js"
 
 const fabricController={
     Inward:async(req,res)=>{
@@ -20,23 +20,33 @@ const fabricController={
 
     Outward:async(req,res)=>{
         try {
-            const{FABRIC_GROUP,COLOR_NAME}=req.body
-            const fabric=await Fabric.findOne({FABRIC_GROUP,COLOR_NAME})
-            res.status(200).send({fabric})
-            console.log(fabric)
+            const{FABRIC_GROUP,COLOR_NAME,ROLL,WGT}=req.body
+            let fabricBalance=await FabricBalance.find({FABRIC_GROUP,COLOR_NAME})
+            .select('DOC_NO FABRIC_GROUP COLOR_NAME SET_NO DC_DIA RECD_DC_ROLL RECD_DC_WGT _id');
+               fabricBalance.RECD_DC_ROLL = Number(fabricBalance.RECD_DC_ROLL) - Number(ROLL);
+               fabricBalance.RECD_DC_WGT = Number(fabricBalance.RECD_DC_WGT) - Number(WGT);
+                await fabricBalance.save();
+                res.status(200).send(fabricBalance)
+
         } catch (error) {
-            console.log("Error in Outward")
+               console.error("Error in Outward:", error);
+               res.status(500).send({ message: "Server error", error });
         }
     },
 
     Balance:async(req,res)=>{
         try {
             
-            const fabric=await Fabric.findOne()
-            res.status(200).send({fabric})
-            console.log(fabric)
+            const fabricData=await Fabric.findOne()
+            let newData=fabricData.toObject()
+            delete newData._id
+            let balance=await FabricBalance(newData)
+            balance.save().then(res.status(200).send("Balance was Saved"))
+  
+            console.log(fabricData)
         } catch (error) {
-            console.log("Error in Outward")
+               console.error("Error in Balance:", error);
+               res.status(500).send({ message: "Server error", error });
         }
     }
 }

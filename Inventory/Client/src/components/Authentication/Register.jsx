@@ -24,8 +24,8 @@ export default function Register() {
       body: JSON.stringify(userData),
     });
 
-    const data = await res.text(); // or res.json() if backend sends JSON
-    alert(data); // shows "User registered successfully 🚀" or error
+    const data = await res.text(); 
+    alert(data); 
     setUserData({ name: "", email: "", phone: "", password: "" });
     navigate('/login')
 
@@ -57,7 +57,8 @@ export default function Register() {
           <input type="phone" required className=' px-2 outline-none text-center border border-gray-200 rounded-lg focus:ring-2  focus:ring-blue-400 ' onChange={handleChange} name='phone' value={userData.phone}/>
           <label >PASSWORD<span className='text-red-600'> *</span></label>
           <input type="text" required
-           className=' px-2 outline-none text-center border border-gray-200 rounded-lg focus:ring-2  focus:ring-blue-400 ' onChange={handleChange} name='password' value={userData.password}/>
+           className=' px-2 outline-none text-center border border-gray-200 rounded-lg focus:ring-2  focus:ring-blue-400 ' 
+           onChange={handleChange} name='password' value={userData.password}/>
         <button  type='submit'
         disabled={!userData.name && !userData.email && !userData.password && !userData.phone}
          className={`${(!userData.name && !userData.email && !userData.password && !userData.phone)?'bg-gary-400':"bg-blue-300 hover:bg-blue-500"} cursor-pointer text-white   rounded-3xl`}
